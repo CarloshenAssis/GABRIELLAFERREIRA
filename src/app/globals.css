@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #faf6ee;
+  --white: #ffffff;
+  --navy: #142238;
+  --navy-2: #0c1626;
+  --terracotta: #bd6a4b;
+  --terracotta-2: #a2563a;
+  --sand: #ece2d0;
+  --sand-2: #e2d5bd;
+  --warm-600: #6f6459;
+  --warm-400: #9a8f82;
+  --line: #ddd0ba;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-white: var(--white);
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-2: var(--terracotta-2);
+  --color-sand: var(--sand);
+  --color-sand-2: var(--sand-2);
+  --color-warm-600: var(--warm-600);
+  --color-warm-400: var(--warm-400);
+  --color-line: var(--line);
+
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-manrope);
+
+  --breakpoint-xs: 22.9375rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--navy);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-serif-display {
+  font-family: var(--font-serif);
+  font-feature-settings: "ss01" 1, "liga" 1;
+}
+
+.text-balance-pretty {
+  text-wrap: pretty;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
