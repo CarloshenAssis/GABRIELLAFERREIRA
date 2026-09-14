@@ -13,20 +13,20 @@ export default function ConteudosHub() {
   const [visible, setVisible] = useState(PAGE_SIZE);
 
   const featured = useMemo(() => articles.find((a) => a.featured) ?? articles[0], []);
-  const pool = useMemo(() => articles.filter((a) => a.slug !== featured.slug), [featured]);
+  const showFeatured = !category && !query.trim();
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return pool.filter((a) => {
+    return articles.filter((a) => {
+      if (showFeatured && a.slug === featured.slug) return false;
       const matchesCategory = category ? a.category === category : true;
       const matchesQuery = q
         ? a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q)
         : true;
       return matchesCategory && matchesQuery;
     });
-  }, [pool, query, category]);
+  }, [featured, query, category, showFeatured]);
 
-  const showFeatured = !category && !query.trim();
   const visibleArticles = filtered.slice(0, visible);
   const hasMore = visible < filtered.length;
 
@@ -118,10 +118,10 @@ function FeaturedArticle({ article }: { article: Article }) {
   return (
     <Reveal>
       <Link href={`/conteudos/${article.slug}`} className="group block border-b border-line pb-14">
-        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta-2">
           Destaque · {article.category}
         </span>
-        <h2 className="text-balance-pretty mt-5 max-w-3xl font-serif-display text-[clamp(1.75rem,3.6vw,2.75rem)] leading-[1.14] text-navy transition-colors group-hover:text-terracotta">
+        <h2 className="text-balance-pretty mt-5 max-w-3xl font-serif-display text-[clamp(1.75rem,3.6vw,2.75rem)] leading-[1.14] text-navy transition-colors group-hover:text-terracotta-2">
           {article.title}
         </h2>
         <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-warm-600">
@@ -138,16 +138,16 @@ function FeaturedArticle({ article }: { article: Article }) {
 function ArticleCard({ article }: { article: Article }) {
   return (
     <Link href={`/conteudos/${article.slug}`} className="group block border-t border-line pt-6">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-warm-400">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-warm-600">
         {article.category}
       </span>
-      <h3 className="mt-3 font-serif-display text-xl leading-snug text-navy transition-colors group-hover:text-terracotta">
+      <h3 className="mt-3 font-serif-display text-xl leading-snug text-navy transition-colors group-hover:text-terracotta-2">
         {article.title}
       </h3>
       <p className="mt-3 max-w-[48ch] text-sm leading-relaxed text-warm-600">
         {article.excerpt}
       </p>
-      <span className="mt-4 flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-warm-400">
+      <span className="mt-4 flex items-center gap-2 text-xs uppercase tracking-[0.1em] text-warm-600">
         {article.readingTime} de leitura
       </span>
     </Link>

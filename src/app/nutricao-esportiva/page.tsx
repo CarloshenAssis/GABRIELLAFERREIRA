@@ -65,7 +65,7 @@ export default function NutricaoEsportivaPage() {
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
             />
-            <span className="absolute bottom-5 left-5 rounded-full bg-terracotta px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ivory">
+            <span className="absolute bottom-5 left-5 rounded-full bg-terracotta-2 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-ivory">
               Nutricionista e atleta
             </span>
           </Reveal>
@@ -109,7 +109,7 @@ export default function NutricaoEsportivaPage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <Reveal>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-terracotta">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-terracotta-light">
                 Também sou atleta
               </span>
             </Reveal>

@@ -19,7 +19,7 @@ export default function FinalCTA({
           </Reveal>
           <Reveal delay={100}>
             <div className="mt-10">
-              <CTAButton href={site.whatsappLink} external variant="primary" className="bg-terracotta hover:bg-ivory hover:text-navy">
+              <CTAButton href={site.whatsappLink} external variant="onDark">
                 Agendar consulta
               </CTAButton>
             </div>

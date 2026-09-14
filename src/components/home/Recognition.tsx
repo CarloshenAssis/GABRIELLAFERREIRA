@@ -5,7 +5,7 @@ export default function Recognition() {
   return (
     <div className="py-10">
       <Container>
-        <p className="text-center text-xs uppercase tracking-[0.16em] text-warm-400">
+        <p className="text-center text-xs uppercase tracking-[0.16em] text-warm-600">
           {site.recognitions.join("  ·  ")}
         </p>
       </Container>

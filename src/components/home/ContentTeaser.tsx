@@ -34,7 +34,7 @@ export default function ContentTeaser() {
             <Link href={`/conteudos/${featured.slug}`} className="group block">
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[2px] bg-navy">
                 <div className="flex h-full flex-col justify-end p-8 sm:p-10">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta-light">
                     {featured.category}
                   </span>
                   <h3 className="mt-4 max-w-md font-serif-display text-2xl leading-snug text-ivory transition-colors group-hover:text-terracotta sm:text-3xl">
@@ -52,10 +52,10 @@ export default function ContentTeaser() {
             {rest.map((article, i) => (
               <Reveal key={article.slug} as="li" delay={i * 70}>
                 <Link href={`/conteudos/${article.slug}`} className="group flex flex-col gap-2 py-6">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-warm-400">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-warm-600">
                     {article.category}
                   </span>
-                  <span className="font-serif-display text-lg leading-snug text-navy transition-colors group-hover:text-terracotta">
+                  <span className="font-serif-display text-lg leading-snug text-navy transition-colors group-hover:text-terracotta-2">
                     {article.title}
                   </span>
                 </Link>

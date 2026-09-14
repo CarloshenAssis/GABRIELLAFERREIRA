@@ -111,7 +111,7 @@ export default function SobrePage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <Reveal>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-terracotta">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-terracotta-light">
                 Filosofia
               </span>
             </Reveal>

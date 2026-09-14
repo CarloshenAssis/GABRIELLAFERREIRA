@@ -27,13 +27,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ivory/45">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ivory/65">
               Navegação
             </p>
             <ul className="mt-5 flex flex-col gap-3">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-ivory/75 transition-colors hover:text-terracotta">
+                  <Link href={item.href} className="text-sm text-ivory/75 transition-colors hover:text-terracotta-light">
                     {item.label}
                   </Link>
                 </li>
@@ -42,22 +42,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ivory/45">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ivory/65">
               Contato
             </p>
             <ul className="mt-5 flex flex-col gap-3 text-sm text-ivory/75">
               <li>
-                <a href={waLinks.default} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-terracotta">
+                <a href={waLinks.default} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-terracotta-light">
                   {site.whatsappDisplay}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="transition-colors hover:text-terracotta">
+                <a href={`mailto:${site.email}`} className="transition-colors hover:text-terracotta-light">
                   {site.email}
                 </a>
               </li>
               <li>
-                <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-terracotta">
+                <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-terracotta-light">
                   {site.instagramHandle}
                 </a>
               </li>
@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ivory/45">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ivory/65">
               Atendimento
             </p>
             <p className="mt-5 text-sm leading-relaxed text-ivory/75">
@@ -87,7 +87,7 @@ export default function Footer() {
             © {year} {site.shortName} — Nutricionista Clínica e Esportiva · {site.crn}
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacidade" className="transition-colors hover:text-terracotta">
+            <Link href="/privacidade" className="transition-colors hover:text-terracotta-light">
               Privacidade
             </Link>
             <span>

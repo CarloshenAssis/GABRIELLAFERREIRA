@@ -27,7 +27,7 @@ export default function EspecialidadesPage() {
               <a
                 key={item.slug}
                 href={`#${item.slug}`}
-                className="text-[13px] font-medium text-warm-600 underline decoration-line underline-offset-4 transition-colors hover:text-terracotta"
+                className="text-[13px] font-medium text-warm-600 underline decoration-line underline-offset-4 transition-colors hover:text-terracotta-2"
               >
                 {item.number} {item.title}
               </a>
@@ -45,7 +45,7 @@ export default function EspecialidadesPage() {
                   id={item.slug}
                   className="grid scroll-mt-28 grid-cols-1 gap-6 border-b border-line py-12 md:grid-cols-[minmax(0,140px)_1fr] md:gap-12 md:py-16"
                 >
-                  <span className="font-serif-display text-5xl text-terracotta md:text-6xl">
+                  <span className="font-serif-display text-5xl text-terracotta-2 md:text-6xl">
                     {item.number}
                   </span>
                   <div className="max-w-2xl">

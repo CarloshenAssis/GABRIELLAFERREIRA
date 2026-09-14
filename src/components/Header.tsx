@@ -35,9 +35,11 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        scrolled || open
-          ? "bg-ivory/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(20,34,56,0.08)]"
-          : "bg-transparent"
+        open
+          ? "bg-ivory shadow-[0_1px_0_0_rgba(20,34,56,0.08)]"
+          : scrolled
+            ? "bg-ivory/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(20,34,56,0.08)]"
+            : "bg-transparent"
       }`}
     >
       <Container className="flex h-20 items-center justify-between md:h-24">
@@ -61,7 +63,7 @@ export default function Header() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={`relative py-2 text-[13px] font-medium uppercase tracking-[0.06em] transition-colors ${
-                  active ? "text-terracotta" : "text-navy/80 hover:text-navy"
+                  active ? "text-terracotta-2" : "text-navy/80 hover:text-navy"
                 }`}
               >
                 {item.label}

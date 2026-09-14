@@ -47,7 +47,7 @@ export default function ContatoPage() {
                   href={site.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl text-navy transition-colors hover:text-terracotta sm:text-2xl"
+                  className="text-xl text-navy transition-colors hover:text-terracotta-2 sm:text-2xl"
                 >
                   {site.whatsappDisplay}
                 </a>
@@ -58,7 +58,7 @@ export default function ContatoPage() {
               <InfoBlock label="E-mail">
                 <a
                   href={`mailto:${site.email}`}
-                  className="text-xl text-navy transition-colors hover:text-terracotta sm:text-2xl"
+                  className="text-xl text-navy transition-colors hover:text-terracotta-2 sm:text-2xl"
                 >
                   {site.email}
                 </a>
@@ -71,7 +71,7 @@ export default function ContatoPage() {
                   href={site.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl text-navy transition-colors hover:text-terracotta sm:text-2xl"
+                  className="text-xl text-navy transition-colors hover:text-terracotta-2 sm:text-2xl"
                 >
                   {site.instagramHandle}
                 </a>

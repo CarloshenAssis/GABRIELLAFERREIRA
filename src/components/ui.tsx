@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export function Eyebrow({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <span
-      className={`inline-flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-terracotta ${className}`}
+      className={`inline-flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-terracotta-2 ${className}`}
     >
       <span className="h-px w-6 bg-terracotta" aria-hidden />
       {children}
@@ -23,7 +23,7 @@ export function KickerLine({ children }: { children: ReactNode }) {
 type ButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "onDark";
   className?: string;
   external?: boolean;
 };
@@ -33,10 +33,12 @@ export function CTAButton({ href, children, variant = "primary", className = "",
     "group inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2";
   const variants: Record<string, string> = {
     primary:
-      "bg-navy text-ivory hover:bg-terracotta shadow-[0_1px_0_0_rgba(20,34,56,0.05)]",
+      "bg-navy text-ivory hover:bg-terracotta-2 shadow-[0_1px_0_0_rgba(20,34,56,0.05)]",
     secondary:
       "border border-navy/25 text-navy hover:border-navy hover:bg-navy hover:text-ivory",
-    ghost: "text-navy hover:text-terracotta px-0 py-0",
+    ghost: "text-navy hover:text-terracotta-2 px-0 py-0",
+    onDark:
+      "bg-terracotta-2 text-ivory hover:bg-ivory hover:text-navy shadow-[0_1px_0_0_rgba(20,34,56,0.05)]",
   };
 
   const content = (

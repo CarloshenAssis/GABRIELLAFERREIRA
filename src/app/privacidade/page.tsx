@@ -33,7 +33,7 @@ export default function PrivacidadePage() {
             <p className="mt-6">
               Em caso de dúvidas sobre o uso de dados neste site, entre em
               contato pelo e-mail{" "}
-              <a href={`mailto:${site.email}`} className="text-navy underline decoration-line underline-offset-4 hover:text-terracotta">
+              <a href={`mailto:${site.email}`} className="text-navy underline decoration-line underline-offset-4 hover:text-terracotta-2">
                 {site.email}
               </a>
               .

@@ -54,14 +54,14 @@ export default async function ArticlePage({
             <Reveal>
               <Link
                 href="/conteudos"
-                className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.08em] text-warm-600 transition-colors hover:text-terracotta"
+                className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.08em] text-warm-600 transition-colors hover:text-terracotta-2"
               >
                 ← Todos os conteúdos
               </Link>
             </Reveal>
 
             <Reveal delay={80}>
-              <span className="mt-8 block text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta">
+              <span className="mt-8 block text-[11px] font-semibold uppercase tracking-[0.18em] text-terracotta-2">
                 {article.category}
               </span>
             </Reveal>
@@ -71,7 +71,7 @@ export default async function ArticlePage({
               </h1>
             </Reveal>
             <Reveal delay={160}>
-              <p className="mt-6 text-xs uppercase tracking-[0.1em] text-warm-400">
+              <p className="mt-6 text-xs uppercase tracking-[0.1em] text-warm-600">
                 {article.readingTime} de leitura · Conteúdo editorial
               </p>
             </Reveal>
@@ -115,10 +115,10 @@ export default async function ArticlePage({
               {relatedFallback.map((item) => (
                 <li key={item.slug}>
                   <Link href={`/conteudos/${item.slug}`} className="group flex flex-col gap-2 py-6">
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-warm-400">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-warm-600">
                       {item.category}
                     </span>
-                    <span className="font-serif-display text-lg leading-snug text-navy transition-colors group-hover:text-terracotta">
+                    <span className="font-serif-display text-lg leading-snug text-navy transition-colors group-hover:text-terracotta-2">
                       {item.title}
                     </span>
                   </Link>

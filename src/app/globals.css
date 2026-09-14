@@ -6,7 +6,8 @@
   --navy: #142238;
   --navy-2: #0c1626;
   --terracotta: #bd6a4b;
-  --terracotta-2: #a2563a;
+  --terracotta-2: #9b5136;
+  --terracotta-light: #e0906c;
   --sand: #ece2d0;
   --sand-2: #e2d5bd;
   --warm-600: #6f6459;
@@ -21,6 +22,7 @@
   --color-navy-2: var(--navy-2);
   --color-terracotta: var(--terracotta);
   --color-terracotta-2: var(--terracotta-2);
+  --color-terracotta-light: var(--terracotta-light);
   --color-sand: var(--sand);
   --color-sand-2: var(--sand-2);
   --color-warm-600: var(--warm-600);

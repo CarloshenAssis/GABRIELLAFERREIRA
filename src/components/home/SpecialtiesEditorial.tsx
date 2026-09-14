@@ -25,7 +25,7 @@ export default function SpecialtiesEditorial() {
               </p>
               <Link
                 href="/especialidades"
-                className="mt-8 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.08em] text-navy transition-colors hover:text-terracotta"
+                className="mt-8 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.08em] text-navy transition-colors hover:text-terracotta-2"
               >
                 Ver todas as especialidades <span aria-hidden>→</span>
               </Link>
@@ -39,11 +39,11 @@ export default function SpecialtiesEditorial() {
                   href={linkFor(item.slug)}
                   className="group grid grid-cols-[auto_1fr_auto] items-baseline gap-x-6 gap-y-2 border-b border-line py-7 transition-colors sm:gap-x-8"
                 >
-                  <span className="font-serif-display text-lg text-warm-400 sm:text-xl">
+                  <span className="font-serif-display text-lg text-warm-600 sm:text-xl">
                     {item.number}
                   </span>
                   <span>
-                    <span className="block font-serif-display text-xl text-navy transition-colors group-hover:text-terracotta sm:text-2xl">
+                    <span className="block font-serif-display text-xl text-navy transition-colors group-hover:text-terracotta-2 sm:text-2xl">
                       {item.title}
                     </span>
                     <span className="mt-2 block max-w-[52ch] text-sm leading-relaxed text-warm-600">
@@ -52,7 +52,7 @@ export default function SpecialtiesEditorial() {
                   </span>
                   <span
                     aria-hidden
-                    className="row-start-1 self-center text-lg text-navy/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-terracotta sm:row-start-auto"
+                    className="row-start-1 self-center text-lg text-navy/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-terracotta-2 sm:row-start-auto"
                   >
                     →
                   </span>
