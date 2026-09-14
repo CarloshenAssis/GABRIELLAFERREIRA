@@ -29,6 +29,11 @@ export default function JsonLd() {
         },
         sameAs: [site.instagramUrl],
         employee: { "@id": `${site.url}/#gabriella` },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: site.googleRating.average.replace(",", "."),
+          reviewCount: site.googleRating.count,
+        },
       },
       {
         "@type": "Person",

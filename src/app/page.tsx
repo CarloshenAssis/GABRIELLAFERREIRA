@@ -6,6 +6,7 @@ import SpecialtiesEditorial from "@/components/home/SpecialtiesEditorial";
 import AboutTeaser from "@/components/home/AboutTeaser";
 import AuthorityNumber from "@/components/home/AuthorityNumber";
 import Process from "@/components/home/Process";
+import Testimonials from "@/components/home/Testimonials";
 import AthleteStory from "@/components/home/AthleteStory";
 import Congress from "@/components/home/Congress";
 import Recognition from "@/components/home/Recognition";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <AboutTeaser />
       <AuthorityNumber />
       <Process />
+      <Testimonials />
       <AthleteStory />
       <Congress />
       <Recognition />

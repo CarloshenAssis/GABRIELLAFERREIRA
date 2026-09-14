@@ -33,6 +33,10 @@ export const site = {
     "Nutricionista Destaque SJC 2026",
     "2ª nutricionista mais votada de São José dos Campos",
   ],
+  googleRating: {
+    average: "5,0",
+    count: 75,
+  },
 } as const;
 
 function whatsappLinkWithText(text: string) {
@@ -378,5 +382,55 @@ export const articles: Article[] = [
       "Esse processo também envolve reconhecer que nem toda semana será igual — e que isso faz parte de uma rotina real. O objetivo não é a perfeição, mas a consistência possível ao longo do tempo.",
       "Um acompanhamento nutricional individualizado ajuda a identificar quais ajustes fazem sentido para a sua vida — e não para um modelo genérico de dieta.",
     ],
+  },
+];
+
+// Depoimentos reais de pacientes, publicados no perfil do Google da Gabriella.
+// Seleção editorial de uma amostra representativa entre as avaliações reais recebidas.
+export type Testimonial = {
+  name: string;
+  text: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Amanda Ellen Santos da Rocha",
+    text: "Além de ser uma excelente profissional, a Gabi é uma pessoa muito gentil e simpática. Graças ao seu atendimento personalizado, consegui alcançar meu objetivo de emagrecer, de maneira gradual e sustentável. Voltei para o meu peso ideal e me sinto feliz comigo mesma.",
+  },
+  {
+    name: "Raphaella Navarro",
+    text: "Super recomendo a nutri Gabi! Estou atingindo meus objetivos sem sofrer com o planejamento alimentar feito pela Gabi, mudei a minha relação com a alimentação e estou tendo muito mais saúde e qualidade de vida.",
+  },
+  {
+    name: "Vinicius Diniz Fonseca",
+    text: "Profissional excepcional! Não trabalha com terror nutricional, monta o cardápio junto com o paciente — o que faz a adesão ao plano ser muito maior — e é extremamente capacitada.",
+  },
+  {
+    name: "Maria Clara Coimbra",
+    text: "Sempre muito atenciosa, dedicada e realmente comprometida com os resultados dos pacientes. Ela é extremamente competente, explica tudo com clareza e monta um plano alimentar que realmente funciona no dia a dia.",
+  },
+  {
+    name: "Brenda Soares",
+    text: "A consulta com a Gabi é muito tranquila, você se sente acolhida e ouvida. O plano alimentar é feito em conjunto, de forma a ser simples e que caiba na sua rotina. Estou em acompanhamento há dois meses e já observo mudanças significativas na minha saúde.",
+  },
+  {
+    name: "Luiz Henrique Dias Durval Fernandes",
+    text: "Excelente profissional, muito dedicada na sua área. Estou tendo acompanhamento para rendimento no esporte e estou gostando muito! Recomendo de olhos fechados.",
+  },
+  {
+    name: "Renata Kauark",
+    text: "Ela começou a me acompanhar durante a minha gestação, me ajudou muito a manter o ganho de peso saudável e, após a gestação, me ajudou a voltar ao corpo normal sem sofrimento. Só tenho a agradecer!",
+  },
+  {
+    name: "Simone Luciana Faria",
+    text: "Gabriella é uma nutricionista extremamente competente e atualizada. O atendimento é humanizado e acolhedor, e o plano alimentar é totalmente personalizado, respeitando a realidade e necessidades do paciente.",
+  },
+  {
+    name: "Isabela Gomes",
+    text: "Ela é muito atenciosa, escuta de verdade as minhas dificuldades e adapta o plano conforme minha rotina. Além disso, o acompanhamento é super próximo e motivador, o que faz toda a diferença.",
+  },
+  {
+    name: "Maria Clara Souza Muniz Barreto",
+    text: "A consulta é bem completa, desde a avaliação física — que compara os percentuais de massa de gordura e massa magra — até a montagem da dieta. Recomendo muito!",
   },
 ];
